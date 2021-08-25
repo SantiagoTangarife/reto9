@@ -1,0 +1,54 @@
+object Main extends App{
+    // Your code here!
+    def primerPunto(a: Int):Boolean={
+        var b=2
+        while(b<a){
+            if(a%b==0) return false
+            b+=1
+        }
+        return true
+    }
+    
+    def segundoPunto(a: BigInt):BigInt={
+        if(a<=1)
+            1
+        else{
+            //var  n=a%10
+            //println(n)
+            a%10+segundoPunto(a/10)                 //siempre se retorna el ultimo dato en est caso a%10 es el ultimo dato
+            
+        }
+        
+    }
+    
+    def cuartoPuntoA(a: BigInt):BigInt={
+         if(a<=1)
+            1
+        else{
+            
+            a*cuartoPuntoA(a-1)   
+    }
+    }
+    
+    def cuartoPuntoB(a:BigInt):BigInt={
+        a*a*a
+    }
+    
+    def cuartoPuntoC(a:BigInt,f:BigInt=> BigInt):BigInt={
+        var sum:BigInt=0
+        var i: BigInt=0
+        while(i<=a){
+            sum=sum+f(i)
+            //println(sum,i)
+            i=i+1
+        }
+        return sum
+        
+    }
+    
+    
+    
+    val x=cuartoPuntoC(5,cuartoPuntoB)
+    
+    println(x)
+}
