@@ -1,0 +1,4 @@
+trait Fgura{
+    def lados(x:Int):Int
+    def radio(x:Float:Float
+}
