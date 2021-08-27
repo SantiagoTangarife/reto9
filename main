@@ -1,0 +1,23 @@
+class esfera(c: Int) extends Figura {
+  var x: Int = xc
+  
+ def radio(obj: Float)=
+    obj*2.35619449019*obj*obj
+}
+class cubo(xc: Int) extends Figura{
+  var x: Int = xc
+  
+  def lado(obj: Int)=
+  obj*obj*obj
+
+}
+
+
+object Main extends App{
+    val esfera= esfera.radio(5)
+    val cubo=cubo.lado(5)
+    
+ 
+    
+    println(esfera,cubo)
+}
